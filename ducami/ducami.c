@@ -1,23 +1,23 @@
 ﻿#include <stdio.h>
 #include <string.h>
 
-#define MAX_STAFF 100
+#define MAX_employee 100
 
-typedef struct _STAFF {
+typedef struct _Employee {
 	char name[21];
 	char position[11];
 	char team[51];
 	int id;
-} STAFF;
+} Employee;
 
-STAFF staff[MAX_STAFF];
+Employee employee[MAX_employee];
 int index = 0;
 
 void printMenu();
 void selectMenu(int input);
-void addStaff();
-void fireStaff();
-void printStaff();
+void addemployee();
+void fireemployee();
+void printemployee();
 
 int main() {
 	int input = 0;
@@ -42,15 +42,15 @@ void selectMenu(int input) {
 	{
 	case 1:
 		printf("\n[사원 추가]\n");
-		addStaff();
+		addemployee();
 		break;
 	case 2:
 		printf("\n[사원 해고]\n");
-		fireStaff();
+		fireemployee();
 		break;
 	case 3:
 		printf("\n[사원 출력]\n");
-		printStaff();
+		printemployee();
 		break;
 	case 4:
 		printf("프로그램을 종료합니다.\n");
@@ -61,7 +61,7 @@ void selectMenu(int input) {
 	printf("\n");
 }
 
-void addStaff() {
+void addemployee() {
 	int id;
 	char name[21], position[11], team[51];
 
@@ -70,24 +70,24 @@ void addStaff() {
 	printf("부서를 입력해주세요 : "); scanf("%s", team);
 	printf("직책을 입력해주세요 : "); scanf("%s", position);
 
-	staff[index].id = id;
-	strcpy(staff[index].name, name);
-	strcpy(staff[index].team, team);
-	strcpy(staff[index].position, position);
+	employee[index].id = id;
+	strcpy(employee[index].name, name);
+	strcpy(employee[index].team, team);
+	strcpy(employee[index].position, position);
 
 	++index;
 }
 
-void fireStaff() {
+void fireemployee() {
 	int id;
 
 	printf("해고할 사원의 번호를 입력해주세요 : "); scanf("%d", &id);
 
 	for (int i = 0; i < index; i++) {
-		if (staff[i].id == id) {
-			printf("%d - %s의 사원을 해고합니다.\n", staff[i].id, staff[i].name);
+		if (employee[i].id == id) {
+			printf("%d - %s의 사원을 해고합니다.\n", employee[i].id, employee[i].name);
 			for (int j = i; j < index; j++) {
-				staff[j] = staff[j + 1];
+				employee[j] = employee[j + 1];
 			}
 			index--;
 			return;
@@ -97,12 +97,12 @@ void fireStaff() {
 	printf("사원을 찾을 수 없습니다.\n");
 }
 
-void printStaff() {
+void printemployee() {
 	for (int i = 0; i < index; i++) {
-		printf("사원 번호 : %d\n", staff[i].id);
-		printf("사원 이름 : %s\n", staff[i].name);
-		printf("사원 부서 : %s\n", staff[i].team);
-		printf("사원 직책 : %s\n", staff[i].position);
+		printf("사원 번호 : %d\n", employee[i].id);
+		printf("사원 이름 : %s\n", employee[i].name);
+		printf("사원 부서 : %s\n", employee[i].team);
+		printf("사원 직책 : %s\n", employee[i].position);
 		printf("\n");
 	}
 }
