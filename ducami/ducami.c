@@ -62,20 +62,22 @@ void selectMenu(int input) {
 }
 
 void addemployee() {
-	int id;
-	char name[21], position[11], team[51];
+	if (index < MAX_employee) {
+		int id;
+		char name[21], position[11], team[51];
 
-	printf("사원 번호를 입력해주세요 : "); scanf("%d", &id);
-	printf("이름을 입력해주세요 : "); scanf("%s", name);
-	printf("부서를 입력해주세요 : "); scanf("%s", team);
-	printf("직책을 입력해주세요 : "); scanf("%s", position);
+		printf("사원 번호를 입력해주세요 : "); scanf("%d", &id);
+		printf("이름을 입력해주세요 : "); scanf("%s", name);
+		printf("부서를 입력해주세요 : "); scanf("%s", team);
+		printf("직책을 입력해주세요 : "); scanf("%s", position);
 
-	employee[index].id = id;
-	strcpy(employee[index].name, name);
-	strcpy(employee[index].team, team);
-	strcpy(employee[index].position, position);
+		employee[index].id = id;
+		strcpy(employee[index].name, name);
+		strcpy(employee[index].team, team);
+		strcpy(employee[index].position, position);
 
-	++index;
+		++index;
+	}
 }
 
 void fireemployee() {
