@@ -1,12 +1,1 @@
-﻿  ducami.c
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(27,25): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(57,7): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(68,52): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(69,45): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(70,45): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(71,45): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(74,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(75,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(76,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gwon0\source\repos\ducami\ducami\ducami.c(84,65): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  ducami.vcxproj -> C:\Users\gwon0\source\repos\ducami\Debug\ducami.exe
+﻿  ducami.vcxproj -> C:\Users\kimkyungwon\Documents\GitHub\ducami_class\Debug\ducami.exe

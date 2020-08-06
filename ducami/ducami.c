@@ -1,23 +1,23 @@
 ﻿#include <stdio.h>
 #include <string.h>
 
-#define MAX_employee 100
+#define MAX_EMPLOYEE 100
 
 typedef struct _Employee {
-	char name[21];
-	char position[11];
-	char team[51];
-	int id;
+	char name[21];		// 사원 이름
+	char position[11];	// 사원 직책
+	char team[51];		// 사원 부서
+	int id;				// 사원 번호
 } Employee;
 
-Employee employee[MAX_employee];
+Employee employee[MAX_EMPLOYEE];
 int index = 0;
 
 void printMenu();
 void selectMenu(int input);
-void addemployee();
-void fireemployee();
-void printemployee();
+void addEmployee();
+void fireEmployee();
+void printEmployee();
 
 int main() {
 	int input = 0;
@@ -42,15 +42,15 @@ void selectMenu(int input) {
 	{
 	case 1:
 		printf("\n[사원 추가]\n");
-		addemployee();
+		addEmployee();
 		break;
 	case 2:
 		printf("\n[사원 해고]\n");
-		fireemployee();
+		fireEmployee();
 		break;
 	case 3:
 		printf("\n[사원 출력]\n");
-		printemployee();
+		printEmployee();
 		break;
 	case 4:
 		printf("프로그램을 종료합니다.\n");
@@ -61,8 +61,8 @@ void selectMenu(int input) {
 	printf("\n");
 }
 
-void addemployee() {
-	if (index < MAX_employee) {
+void addEmployee() {
+	if (index < MAX_EMPLOYEE) {
 		int id;
 		char name[21], position[11], team[51];
 
@@ -80,7 +80,7 @@ void addemployee() {
 	}
 }
 
-void fireemployee() {
+void fireEmployee() {
 	int id;
 
 	printf("해고할 사원의 번호를 입력해주세요 : "); scanf("%d", &id);
@@ -99,7 +99,7 @@ void fireemployee() {
 	printf("사원을 찾을 수 없습니다.\n");
 }
 
-void printemployee() {
+void printEmployee() {
 	for (int i = 0; i < index; i++) {
 		printf("사원 번호 : %d\n", employee[i].id);
 		printf("사원 이름 : %s\n", employee[i].name);
