@@ -28,7 +28,7 @@ int main() {
 		selectMenu(input);
 	}
 }
-
+ 
 void printMenu() {
 	printf("----메뉴----\n");
 	printf("1. 사원 추가\n");
@@ -78,6 +78,8 @@ void addEmployee() {
 
 		++index;
 	}
+	else
+		printf("ERROR : 사원은 최대 100명 입니다.");
 }
 
 void fireEmployee() {
@@ -87,7 +89,8 @@ void fireEmployee() {
 
 	for (int i = 0; i < index; i++) {
 		if (employee[i].id == id) {
-			printf("%d - %s의 사원을 해고합니다.\n", employee[i].id, employee[i].name);
+			printf("%d - %s의 사원을 해고합니다.\n", 
+				employee[i].id, employee[i].name);
 			for (int j = i; j < index; j++) {
 				employee[j] = employee[j + 1];
 			}
@@ -96,7 +99,7 @@ void fireEmployee() {
 		}
 	}
 
-	printf("사원을 찾을 수 없습니다.\n");
+	printf("ERROR : 사원을 찾을 수 없습니다.\n");
 }
 
 void printEmployee() {
